@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer').themes.github;
-const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -48,7 +48,7 @@ const config = {
       },
       docs: {
         sidebar: {
-          autoCollapseCategories: true,
+          autoCollapseCategories: false,
           hideable: false,
         },
       },
@@ -61,7 +61,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'getting-started',
+            docId: 'introduction',
             position: 'left',
             label: 'Docs',
           },
@@ -80,12 +80,20 @@ const config = {
             title: 'Docs',
             items: [
               {
+                label: 'Introduction',
+                to: '/docs/introduction',
+              },
+              {
                 label: 'Getting Started',
                 to: '/docs/getting-started',
               },
               {
-                label: 'Advanced Usage',
-                to: '/docs/advanced-usage',
+                label: 'Customization',
+                to: '/docs/getting-started/customization',
+              },
+              {
+                label: 'Addons',
+                to: '/docs/addons',
               },
               {
                 label: 'Development',
@@ -127,7 +135,7 @@ const config = {
                     <img src="https://opencollective.com/spicetify/tiers/supporter.svg?avatarHeight=36" alt="Open Collective" />
                   </a>
                 `,
-              },
+              }
             ],
           },
         ],
